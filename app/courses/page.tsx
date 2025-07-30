@@ -96,11 +96,22 @@ export default async function CoursesPage() {
   const courses = mockCourses;
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-gradient-to-br from-background via-background to-muted/20">
       <CourseHero />
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <CourseFilters />
-        <CourseGrid courses={courses} />
+      <div className="max-w-7xl mx-auto px-4 py-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+          {/* Filters Sidebar */}
+          <div className="lg:col-span-1">
+            <div className="sticky top-24">
+              <CourseFilters />
+            </div>
+          </div>
+          
+          {/* Main Content */}
+          <div className="lg:col-span-3">
+            <CourseGrid courses={courses} />
+          </div>
+        </div>
       </div>
     </div>
   );

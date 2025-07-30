@@ -1,42 +1,57 @@
-import { Search } from "lucide-react";
+import { Search, TrendingUp, Users, Star } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export default function CourseHero() {
   return (
-    <section className="w-full py-16 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#ff512f] animate-gradient-x">
-      <div className="max-w-4xl mx-auto px-4 text-center">
-        <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+    <section className="w-full py-20 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#ff512f] animate-gradient-x relative overflow-hidden">
+      {/* Background decoration */}
+      <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-6 translate-y-12"></div>
+      
+      <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
+        <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white animate-fade-in-up">
           Explore Programming Courses
         </h1>
-        <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+        <p className="text-xl md:text-2xl text-muted-foreground mb-10 max-w-3xl mx-auto leading-relaxed animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
           Learn from expert developers and advance your skills with our curated collection of high-quality courses.
         </p>
         
-        {/* Search Bar */}
-        <div className="max-w-2xl mx-auto mb-8">
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5" />
+        {/* Enhanced Search Bar */}
+        <div className="max-w-2xl mx-auto mb-12 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
+          <div className="relative group">
+            <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-muted-foreground w-5 h-5 group-focus-within:text-primary transition-colors duration-300" />
             <input
               type="text"
               placeholder="Search for courses, technologies, or instructors..."
-              className="w-full pl-12 pr-4 py-4 bg-background/90 backdrop-blur border border-border/50 rounded-xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary transition-all duration-300"
+              className="w-full pl-12 pr-4 py-5 bg-background/95 backdrop-blur border border-border/50 rounded-2xl text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300 text-lg shadow-lg"
             />
+            <Button className="absolute right-2 top-1/2 transform -translate-y-1/2 px-6 py-2 bg-primary hover:bg-primary/90 transition-all duration-300">
+              Search
+            </Button>
           </div>
         </div>
         
-        {/* Quick Stats */}
-        <div className="flex flex-wrap justify-center gap-8 text-white/80">
-          <div className="text-center">
-            <div className="text-2xl font-bold">50+</div>
-            <div className="text-sm">Courses Available</div>
+        {/* Enhanced Quick Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <div className="text-center group">
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 mb-4 group-hover:bg-white/20 transition-all duration-300">
+              <TrendingUp className="w-8 h-8 text-primary mx-auto mb-2" />
+              <div className="text-3xl font-bold text-white">50+</div>
+              <div className="text-sm text-white/80">Courses Available</div>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">10k+</div>
-            <div className="text-sm">Students Enrolled</div>
+          <div className="text-center group">
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 mb-4 group-hover:bg-white/20 transition-all duration-300">
+              <Users className="w-8 h-8 text-primary mx-auto mb-2" />
+              <div className="text-3xl font-bold text-white">10k+</div>
+              <div className="text-sm text-white/80">Students Enrolled</div>
+            </div>
           </div>
-          <div className="text-center">
-            <div className="text-2xl font-bold">4.8★</div>
-            <div className="text-sm">Average Rating</div>
+          <div className="text-center group">
+            <div className="bg-white/10 backdrop-blur rounded-2xl p-6 mb-4 group-hover:bg-white/20 transition-all duration-300">
+              <Star className="w-8 h-8 text-primary mx-auto mb-2" />
+              <div className="text-3xl font-bold text-white">4.8★</div>
+              <div className="text-sm text-white/80">Average Rating</div>
+            </div>
           </div>
         </div>
       </div>
