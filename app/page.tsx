@@ -2,6 +2,8 @@ import HeroSection from "@/components/HeroSection";
 import FeaturesSection from "@/components/FeaturesSection";
 import CallToAction from "@/components/CallToAction";
 import Navbar from "@/components/Navbar";
+import AboutSection from "@/components/AboutSection";
+import ContactSection from "@/components/ContactSection";
 
 export default function HomePage() {
   return (
@@ -11,6 +13,8 @@ export default function HomePage() {
         <HeroSection />
         <FeaturesSection />
         <CallToAction />
+        <AboutSection />
+        <ContactSection />
       </main>
     </>
   );
