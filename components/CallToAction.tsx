@@ -6,7 +6,7 @@ export default function CallToAction() {
       <div className="max-w-xl mx-auto px-4 text-center">
         <h3 className="text-2xl md:text-3xl font-semibold mb-4">Ready to level up?</h3>
         <p className="text-muted-foreground mb-8">
-          Browse our curated selection of programming courses, or start sharing your own expertise today.
+          Explore top programming courses or share your own.
         </p>
         <Button asChild size="lg">
           <a href="/courses">Explore Courses</a>

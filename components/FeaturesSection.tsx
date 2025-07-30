@@ -5,22 +5,22 @@ const features = [
   {
     icon: <Code className="w-8 h-8 text-primary" />,
     title: "Developer-Focused",
-    description: "Built by and for developers. No fluff, just practical, high-quality content to help you grow your skills and career.",
+    description: "By devs, for devs. Practical, high-quality content.",
   },
   {
     icon: <ShieldCheck className="w-8 h-8 text-primary" />,
     title: "Secure & Trusted",
-    description: "Your data and payments are protected with industry-standard security. Learn and teach with confidence.",
+    description: "Your data and payments are always safe.",
   },
   {
     icon: <Rocket className="w-8 h-8 text-primary" />,
     title: "Launch Your Course",
-    description: "Easily publish and monetize your expertise. Our platform handles the tech, so you can focus on teaching.",
+    description: "Publish and monetize your expertise easily.",
   },
   {
     icon: <Users className="w-8 h-8 text-primary" />,
     title: "Community Driven",
-    description: "Join a growing network of passionate learners and instructors. Collaborate, share, and succeed together.",
+    description: "Join a network of passionate learners & teachers.",
   },
 ];
 
@@ -31,13 +31,16 @@ export default function FeaturesSection() {
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-10">Why Choose ahmadsheikhdev?</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {features.map((feature, idx) => (
-            <Card key={idx} className="h-full flex flex-col items-center text-center">
+            <Card
+              key={idx}
+              className="h-full flex flex-col items-center text-center transition-all duration-200 hover:bg-muted/70 hover:shadow-lg hover:scale-[1.03] cursor-pointer"
+            >
               <CardHeader>
                 <div className="flex justify-center mb-2">{feature.icon}</div>
-                <CardTitle>{feature.title}</CardTitle>
+                <CardTitle className="text-center w-full">{feature.title}</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground text-sm">{feature.description}</p>
+                <p className="text-muted-foreground text-sm text-center">{feature.description}</p>
               </CardContent>
             </Card>
           ))}
