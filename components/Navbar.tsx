@@ -15,6 +15,9 @@ export default function Navbar() {
             <Link href="/">Home</Link>
           </Button>
           <Button asChild variant="ghost" className="text-base font-medium hover:bg-primary/10 hover:text-primary transition-all duration-300">
+            <Link href="/courses">Courses</Link>
+          </Button>
+          <Button asChild variant="ghost" className="text-base font-medium hover:bg-primary/10 hover:text-primary transition-all duration-300">
             <Link href="#about">About Us</Link>
           </Button>
           <Button asChild variant="ghost" className="text-base font-medium hover:bg-primary/10 hover:text-primary transition-all duration-300">
