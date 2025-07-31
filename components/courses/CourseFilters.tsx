@@ -3,7 +3,8 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Filter, X, Sparkles } from "lucide-react";
+import { Filter, X, Sparkles, ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 const categories = ["All", "Frontend", "Backend", "Full-Stack", "Mobile", "Data Science", "DevOps"];
 const levels = ["All", "Beginner", "Intermediate", "Advanced"];
@@ -24,6 +25,16 @@ export default function CourseFilters() {
 
   return (
     <div className="mb-12 bg-gradient-to-r from-muted/30 via-background to-muted/30 rounded-2xl p-8 border border-border/50 shadow-lg">
+      {/* Back Navigation Button */}
+      <div className="mb-6">
+        <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground border-dashed hover:border-solid transition-all duration-300">
+          <Link href="/" className="flex items-center gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Home
+          </Link>
+        </Button>
+      </div>
+
       {/* Enhanced Filter Header */}
       <div className="flex items-center justify-between mb-8">
         <div className="flex items-center gap-3">

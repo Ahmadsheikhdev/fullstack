@@ -1,11 +1,22 @@
-import { Search, TrendingUp, Users, Star } from "lucide-react";
+import { Search, TrendingUp, Users, Star, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function CourseHero() {
   return (
     <section className="w-full py-20 bg-gradient-to-br from-[#0f2027] via-[#2c5364] to-[#ff512f] animate-gradient-x relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent transform -skew-y-6 translate-y-12"></div>
+      
+      {/* Back Navigation Button */}
+      <div className="absolute top-6 left-6 z-20 animate-fade-in-up">
+        <Button asChild variant="outline" size="sm" className="bg-background/20 backdrop-blur border-white/20 text-white hover:bg-white/20 hover:text-white transition-all duration-300 shadow-lg">
+          <Link href="/" className="flex items-center gap-2">
+            <ArrowLeft className="w-4 h-4" />
+            Back to Home
+          </Link>
+        </Button>
+      </div>
       
       <div className="max-w-5xl mx-auto px-4 text-center relative z-10">
         <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white animate-fade-in-up">

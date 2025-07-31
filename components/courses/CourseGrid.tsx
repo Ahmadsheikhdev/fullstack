@@ -1,4 +1,7 @@
 import CourseCard from "./CourseCard";
+import { Button } from "@/components/ui/button";
+import { ArrowLeft } from "lucide-react";
+import Link from "next/link";
 
 interface Course {
   id: string;
@@ -34,6 +37,14 @@ export default function CourseGrid({ courses }: CourseGridProps) {
           <p className="text-muted-foreground">
             Try adjusting your filters or search terms to find what you're looking for.
           </p>
+          <div className="mt-6">
+            <Button asChild variant="outline" className="text-muted-foreground hover:text-foreground">
+              <Link href="/" className="flex items-center gap-2">
+                <ArrowLeft className="w-4 h-4" />
+                Back to Home
+              </Link>
+            </Button>
+          </div>
         </div>
       </div>
     );
@@ -43,13 +54,21 @@ export default function CourseGrid({ courses }: CourseGridProps) {
     <div className="space-y-8">
       {/* Results Header */}
       <div className="flex items-center justify-between">
-        <div>
-          <h2 className="text-2xl font-bold text-foreground">
-            Available Courses
-          </h2>
-          <p className="text-muted-foreground">
-            Showing {courses.length} course{courses.length !== 1 ? 's' : ''} to help you advance your skills
-          </p>
+        <div className="flex items-center gap-4">
+          <Button asChild variant="outline" size="sm" className="text-muted-foreground hover:text-foreground border-dashed hover:border-solid transition-all duration-300">
+            <Link href="/" className="flex items-center gap-2">
+              <ArrowLeft className="w-4 h-4" />
+              Back to Home
+            </Link>
+          </Button>
+          <div>
+            <h2 className="text-2xl font-bold text-foreground">
+              Available Courses
+            </h2>
+            <p className="text-muted-foreground">
+              Showing {courses.length} course{courses.length !== 1 ? 's' : ''} to help you advance your skills
+            </p>
+          </div>
         </div>
         <div className="text-right">
           <div className="text-sm text-muted-foreground">Sort by:</div>
