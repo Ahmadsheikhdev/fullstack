@@ -8,15 +8,17 @@ import { Star, Users, Clock, Play, BookOpen } from "lucide-react";
 interface Course {
   id: string;
   title: string;
-  instructor: string;
-  price: number;
-  rating: number;
-  students: number;
-  image: string;
-  category: string;
-  level: string;
-  duration: string;
   description: string;
+  instructor: {
+    name: string;
+  };
+  price: number;
+  duration: string;
+  level: string;
+  category: string;
+  rating: number;
+  enrolledStudents: number;
+  image: string;
 }
 
 interface CourseCardProps {
@@ -76,7 +78,7 @@ export default function CourseCard({ course }: CourseCardProps) {
               </div>
               <div className="flex items-center gap-1">
                 <Users className="w-4 h-4" />
-                <span className="font-medium">{course.students.toLocaleString()}</span>
+                <span className="font-medium">{course.enrolledStudents.toLocaleString()}</span>
               </div>
             </div>
           </div>
@@ -92,7 +94,7 @@ export default function CourseCard({ course }: CourseCardProps) {
               <div className="w-6 h-6 bg-primary/10 rounded-full flex items-center justify-center">
                 <BookOpen className="w-3 h-3 text-primary" />
               </div>
-              <span className="font-medium text-foreground">by {course.instructor}</span>
+              <span className="font-medium text-foreground">by {course.instructor.name}</span>
             </div>
             <div className="flex items-center gap-1 text-muted-foreground">
               <Clock className="w-4 h-4" />
@@ -101,13 +103,12 @@ export default function CourseCard({ course }: CourseCardProps) {
           </div>
 
           {/* Price and CTA */}
-          <div className="flex items-center justify-between pt-4 border-t border-border/50">
-            <div className="text-3xl font-bold text-primary">
+          <div className="flex items-center justify-between pt-2">
+            <div className="text-2xl font-bold text-foreground">
               ${course.price}
             </div>
-            <Button asChild size="sm" className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
-              <Link href={`/courses/${course.id}`} className="flex items-center gap-2">
-                <Play className="w-4 h-4" />
+            <Button asChild className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold px-6 py-2 rounded-xl transition-all duration-300 hover:scale-105 shadow-lg">
+              <Link href={`/courses/${course.id}`}>
                 View Course
               </Link>
             </Button>

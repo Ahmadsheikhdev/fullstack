@@ -10,13 +10,9 @@ import {
   DollarSign, 
   TrendingUp, 
   Star,
-  Eye,
-  Play,
   Plus,
   ArrowRight,
-  Calendar,
-  BarChart3,
-  Target
+  BarChart3
 } from "lucide-react";
 import Link from "next/link";
 
@@ -308,7 +304,8 @@ export default async function InstructorDashboard() {
                 {courses.flatMap(course => 
                   course.enrollments.slice(0, 3).map(enrollment => ({
                     ...enrollment,
-                    courseTitle: course.title
+                    courseTitle: course.title,
+                    coursePrice: course.price
                   }))
                 ).sort((a, b) => new Date(b.enrolledAt).getTime() - new Date(a.enrolledAt).getTime())
                 .slice(0, 5).map((enrollment) => (
@@ -322,7 +319,7 @@ export default async function InstructorDashboard() {
                         {enrollment.user.name} enrolled on {new Date(enrollment.enrolledAt).toLocaleDateString()}
                       </p>
                     </div>
-                    <Badge variant="secondary">+${enrollment.course.price}</Badge>
+                    <Badge variant="secondary">+${enrollment.coursePrice}</Badge>
                   </div>
                 ))}
               </div>

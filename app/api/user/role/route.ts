@@ -48,7 +48,7 @@ export async function PATCH(request: NextRequest) {
         { 
           success: false, 
           message: 'Invalid role data',
-          errors: error.errors 
+          errors: error.issues 
         },
         { status: 400 }
       );
@@ -64,7 +64,7 @@ export async function PATCH(request: NextRequest) {
   }
 }
 
-export async function GET(request: NextRequest) {
+export async function GET() {
   try {
     const { userId } = await auth();
     

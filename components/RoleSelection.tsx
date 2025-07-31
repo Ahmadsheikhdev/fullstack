@@ -5,10 +5,8 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { 
-  BookOpen, 
   Users, 
   GraduationCap, 
-  TrendingUp,
   CheckCircle,
   ArrowRight
 } from "lucide-react";
@@ -59,7 +57,7 @@ export default function RoleSelection() {
         <div className="text-center mb-8">
           <h1 className="text-4xl font-bold text-foreground mb-4">Choose Your Role</h1>
           <p className="text-xl text-muted-foreground">
-            Select how you'd like to use ahmadsheikhdev
+            Select how you&apos;d like to use ahmadsheikhdev
           </p>
         </div>
 
