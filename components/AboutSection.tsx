@@ -13,7 +13,8 @@ export default function AboutSection() {
             <div>
               <h2 className="text-4xl md:text-5xl font-bold mb-6">About Us</h2>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-                <span className="font-semibold text-white">ahmadsheikhdev</span> is built by developers, for developers. Our mission is to empower coders to learn, teach, and grow—together. We believe in practical, high-quality content and a supportive community.
+                <span className="font-semibold text-white">ahmadsheikhdev</span> {" "}
+                 <span className="text-black">is built by developers, for developers. Our mission is to empower coders to learn, teach, and grow—together. We believe in practical, high-quality content and a supportive community.</span>
               </p>
             </div>
             
@@ -25,7 +26,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Community First</h3>
-                  <p className="text-sm text-muted-foreground">Join thousands of developers learning and growing together.</p>
+                  <p className="text-sm  text-black">Join thousands of developers learning and growing together.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -34,7 +35,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Quality Content</h3>
-                  <p className="text-sm text-muted-foreground">Curated courses from industry experts and practitioners.</p>
+                  <p className="text-sm text-black">Curated courses from industry experts and practitioners.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -43,7 +44,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Global Reach</h3>
-                  <p className="text-sm text-muted-foreground">Accessible to developers worldwide, anytime, anywhere.</p>
+                  <p className="text-sm text-black">Accessible to developers worldwide, anytime, anywhere.</p>
                 </div>
               </div>
               <div className="flex items-start gap-3">
@@ -52,7 +53,7 @@ export default function AboutSection() {
                 </div>
                 <div>
                   <h3 className="font-semibold mb-1">Practical Learning</h3>
-                  <p className="text-sm text-muted-foreground">Real-world projects and hands-on experience.</p>
+                  <p className="text-sm text-black">Real-world projects and hands-on experience.</p>
                 </div>
               </div>
             </div>
